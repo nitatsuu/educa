@@ -1,0 +1,2 @@
+Educa - Everyone Teaches Everyone
+This project is an open, community-driven learning platform where users can both teach and learn. Anyone can create courses, share skills, host live sessions, and participate in collaborative learning. The goal is to make education accessible and built by the community.
