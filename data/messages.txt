@@ -1,0 +1,3 @@
+{"ts":"2025-12-12T18:07:47+00:00","from":"niga2","to":"nitatsuu","text":"hello"}
+{"ts":"2025-12-12T18:07:59+00:00","from":"niga2","to":"niga","text":"fuck you black man"}
+{"ts":"2025-12-12T18:08:39+00:00","from":"nitatsuu","to":"niga2","text":"fuck you black man"}

@@ -10,7 +10,7 @@ require_once __DIR__ . '/php/init.php';
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js" defer></script>
 </head>
-<body>
+<body <?= isset($pageBodyAttrs) ? $pageBodyAttrs : '' ?>>
 <header class="site-header">
     <div class="container header-inner">
         <div class="logo">
