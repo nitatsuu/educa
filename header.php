@@ -37,7 +37,7 @@ require_once __DIR__ . '/php/init.php';
                 </span>
 
                 <!-- Пізніше підв’яжемо до реальної авторизації -->
-                <a href="/php/login.php" class="btn-link">Увійти</a>
+                <a href="/auth.php" class="btn-link">Увійти</a>
                 <a href="/php/logout.php" class="btn-link btn-link--secondary">Вийти</a>
             </div>
         </div>
