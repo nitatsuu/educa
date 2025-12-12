@@ -390,3 +390,39 @@ a {
     .home-grid{ display:none; }
     .home-carousel{ display:block; }
 }
+
+.stars-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px;
+    margin-top:16px;
+}
+
+.tariff-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    font-size:14px;
+}
+.tariff-table th,
+.tariff-table td{
+    border:1px solid #222535;
+    padding:8px 10px;
+    text-align:left;
+}
+.tariff-table th{
+    background:#0d0f1a;
+}
+
+.exchange-info{
+    margin:12px 0;
+    padding-left:18px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+@media (max-width: 768px){
+    .stars-grid{
+        grid-template-columns: 1fr;
+    }
+}
