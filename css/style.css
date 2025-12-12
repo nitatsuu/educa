@@ -264,3 +264,129 @@ a {
     .profile-grid { grid-template-columns: 1fr; }
     .two-cols { grid-template-columns: 1fr; }
 }
+
+.tutors-toolbar .toolbar-row{
+    display:flex;
+    gap:12px;
+    align-items:flex-end;
+}
+.tutors-toolbar button{ height:42px; }
+
+.tutors-grid{
+    margin-top:16px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:16px;
+}
+
+.tutor-card{
+    border: 1px solid #222535;
+    border-radius: 14px;
+    padding: 14px;
+    background: #0a0b12;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.tutor-card--compact{
+    padding: 12px;
+}
+
+.tutor-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.tutor-avatar{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    border: 1px solid #222535;
+    display:grid;
+    place-items:center;
+    background:#070810;
+}
+
+.tutor-price{
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #222535;
+    background: rgba(255, 204, 0, 0.10);
+    font-size: 13px;
+}
+
+.tutor-name{ margin:0; font-size:16px; }
+.tutor-title{ font-size:13px; }
+
+.tutor-meta .badge{
+    display:inline-block;
+    padding: 4px 10px;
+    border-radius:999px;
+    border:1px solid #222535;
+    background:#070810;
+    font-size:13px;
+    opacity:0.9;
+}
+
+.tutor-desc{ margin:0; font-size:13px; line-height:1.4; }
+
+.tutor-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.tutor-action{
+    margin-top:auto;
+}
+
+/* Головна */
+.home-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:16px;
+}
+
+.home-grid{ margin-top:12px; }
+
+/* Мобілка: 2 ряди з горизонтальною прокруткою */
+.home-carousel{ display:none; margin-top:12px; }
+.carousel-row{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type: x mandatory;
+}
+.carousel-row .tutor-card{
+    min-width: 220px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+/* Адаптив */
+@media (max-width: 900px){
+    .tutors-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px){
+    .tutors-toolbar .toolbar-row{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .tutors-toolbar button{ width:100%; }
+
+    /* На мобілці в tutors.php можна лишити сітку 1 колонка */
+    .tutors-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* На головній: ховаємо сітку, показуємо карусель */
+    .home-grid{ display:none; }
+    .home-carousel{ display:block; }
+}
