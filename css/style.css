@@ -507,3 +507,52 @@ a {
     .chat-layout{ grid-template-columns: 1fr; }
     .chat-box{ height: 320px; }
 }
+
+.ratings-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.rating-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:6px;
+    font-size:14px;
+}
+
+.rating-table th,
+.rating-table td{
+    border:1px solid #222535;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.rating-table th{
+    background:#0d0f1a;
+    font-size:13px;
+    opacity:0.9;
+}
+
+.pill{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #222535;
+    background:#070810;
+    font-size:13px;
+    opacity:0.9;
+}
+
+/* Стилі звань (без кольорів — просто різний фон/контраст) */
+.rank-1{ background: rgba(255, 204, 0, 0.12); }
+.rank-2{ background: rgba(0, 140, 255, 0.10); }
+.rank-3{ background: rgba(0, 180, 120, 0.10); }
+.rank-top{ background: rgba(255, 255, 255, 0.06); }
+.rank-new{ background: rgba(255, 255, 255, 0.03); }
+
+@media (max-width: 768px){
+    .ratings-head{ flex-direction:column; align-items:flex-start; }
+}
