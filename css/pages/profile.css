@@ -40,3 +40,45 @@
   .profile-grid { grid-template-columns: 1fr; }
   .two-cols { grid-template-columns: 1fr; }
 }
+
+.avatar-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.sep{
+  border:none;
+  border-top:1px solid #222535;
+  margin:16px 0;
+}
+
+.calendar-wrap{
+  overflow:auto;
+  margin-top:10px;
+}
+
+.calendar-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  min-width: 520px;
+}
+
+.calendar-table th,
+.calendar-table td{
+  border:1px solid #222535;
+  padding:10px 12px;
+  text-align:center;
+}
+
+.calendar-table th{
+  background:#0d0f1a;
+  opacity:0.9;
+}
+
+.slot{ opacity:0.85; }
+.slot.busy{
+  background: rgba(255, 80, 80, 0.08);
+}

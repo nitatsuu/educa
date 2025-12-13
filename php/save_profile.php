@@ -38,6 +38,7 @@ function parse_tags(string $raw): array {
 }
 
 $login = $user['login'];
+$avatarPath = null;
 
 $display_name = norm_text((string)($_POST['display_name'] ?? ''), 40);
 $bio         = norm_text((string)($_POST['bio'] ?? ''), 240);
@@ -45,8 +46,35 @@ $teaches     = norm_text((string)($_POST['teaches'] ?? ''), 120);
 $learns      = norm_text((string)($_POST['learns'] ?? ''), 120);
 $tags        = parse_tags((string)($_POST['tags'] ?? ''));
 
+
+// якщо вже є профіль — збережемо старий avatar
+$existing = profiles_find($login);
+if (is_array($existing) && !empty($existing['avatar'])) {
+    $avatarPath = (string)$existing['avatar'];
+}
+
+if (!empty($_FILES['avatar']) && isset($_FILES['avatar']['tmp_name']) && is_uploaded_file($_FILES['avatar']['tmp_name'])) {
+    $maxSize = 2 * 1024 * 1024; // 2MB
+    if (($_FILES['avatar']['size'] ?? 0) <= $maxSize) {
+        $ext = strtolower(pathinfo($_FILES['avatar']['name'] ?? '', PATHINFO_EXTENSION));
+        $allowed = ['jpg', 'jpeg', 'png', 'webp'];
+        if (in_array($ext, $allowed, true)) {
+            $dir = __DIR__ . '/../img/avatars';
+            if (!is_dir($dir)) mkdir($dir, 0777, true);
+
+            $fileName = $login . '.' . ($ext === 'jpeg' ? 'jpg' : $ext);
+            $destAbs = $dir . '/' . $fileName;
+
+            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destAbs)) {
+                $avatarPath = '/img/avatars/' . $fileName;
+            }
+        }
+    } 
+}
+
 $profile = [
     'login'        => $login,
+    'avatar' => $avatarPath,
     'display_name' => $display_name !== '' ? $display_name : $login,
     'bio'          => $bio,
     'teaches'      => $teaches,

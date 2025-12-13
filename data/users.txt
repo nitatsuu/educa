@@ -1,0 +1,2 @@
+{"login":"nitatsuu","pass_hash":"$2y$10$6DxR2AcPeDpcoG7wd.LQM.iBoYHqaEbEjKfjHNYk\/Gq76XNCv7GgC","yellow":0,"blue":0,"premium":false,"created_at":"2025-12-13T14:11:39+00:00"}
+{"login":"test","pass_hash":"$2y$10$VcL6NSXs8PnrbUdPskzg2u\/6vJNAMLZkSSbINU4rwnrHMOKh2\/t0y","yellow":0,"blue":0,"premium":false,"created_at":"2025-12-13T14:11:54+00:00"}
