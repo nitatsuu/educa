@@ -1,0 +1,29 @@
+.tutor-hero{
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+.tutor-cover{
+  height: 220px;
+  border-radius: 14px;
+  border: 1px solid #222535;
+  background: #070810;
+  background-size: cover;
+  background-position: center;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid #222535;
+  background:#070810;
+  font-size:13px;
+  opacity:0.9;
+}
+
+@media (max-width: 768px){
+  .tutor-hero{ grid-template-columns: 1fr; }
+}

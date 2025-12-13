@@ -26,7 +26,7 @@ $user = [
     'login' => $login,
     'pass_hash' => password_hash($password, PASSWORD_DEFAULT),
     'yellow' => 0,
-    'blue' => 0,
+    'blue' => 50,
     'premium' => false,
     'created_at' => date('c'),
 ];

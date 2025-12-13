@@ -1,6 +1,8 @@
 [
   {
     "id": "t1",
+    "login": "tutor_t1",
+    "img": 0,  
     "name": "Олена К.",
     "title": "Математика (5–11 клас)",
     "price_yellow": 2,
@@ -10,6 +12,8 @@
   },
   {
     "id": "t2",
+    "login": "tutor_t2",
+    "img": 1,
     "name": "Андрій М.",
     "title": "Python для початківців",
     "price_yellow": 2,
@@ -19,6 +23,8 @@
   },
   {
     "id": "t3",
+    "login": "tutor_t3",
+    "img": 2,
     "name": "Ірина С.",
     "title": "Англійська розмовна",
     "price_yellow": 3,
@@ -28,6 +34,8 @@
   },
   {
     "id": "t4",
+    "login": "tutor_t4",
+    "img": 3,
     "name": "Дмитро Р.",
     "title": "C# / .NET базово",
     "price_yellow": 2,
@@ -37,6 +45,8 @@
   },
   {
     "id": "t5",
+    "login": "tutor_t5",
+    "img": 4,
     "name": "Марія П.",
     "title": "Дизайн / Figma",
     "price_yellow": 3,
@@ -46,6 +56,8 @@
   },
   {
     "id": "t6",
+    "login": "tutor_t6",
+    "img": 5,
     "name": "Сергій Л.",
     "title": "Фізика (10–11 клас)",
     "price_yellow": 2,

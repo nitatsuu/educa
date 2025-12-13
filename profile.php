@@ -161,16 +161,20 @@ require_once __DIR__ . '/header.php';
                     <button class="btn-primary" type="submit">Зберегти</button>
 
                     <hr class="sep">
-
-                    <?php if (!empty($user['premium'])): ?>
-                        <a class="btn-primary" href="/create_course.php" style="display:inline-block;">
-                            Створити курс
-                        </a>
-                    <?php else: ?>
-                        <button class="btn-secondary" type="button" disabled title="Доступно з Premium">
-                            Створити курс (Premium)
-                        </button>
-                    <?php endif; ?>
+                    
+                    <div class="profile-buttons">
+                        <?php if (!empty($user['premium'])): ?>
+                            <a class="btn-primary" href="/create_course.php" style="display:inline-block;">
+                                Створити курс
+                            </a>
+                        <?php else: ?>
+                            <button class="btn-secondary" type="button" disabled title="Доступно з Premium">
+                                Створити курс (Premium)
+                            </button>
+                        <?php endif; ?>
+                        
+                        <button class="btn-primary" id="startLesson"> Провести урок </button>
+                    </div>
                 </form>
             <?php else: ?>
                 <p class="muted">Редагування недоступне.</p>

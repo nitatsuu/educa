@@ -29,21 +29,23 @@ $recRow2 = array_slice($recommended, 3, 3);
         <div class="tutors-grid home-grid">
             <?php foreach ($recommended as $t): ?>
                 <?php $tags = is_array($t['tags'] ?? null) ? $t['tags'] : []; ?>
-                <article class="tutor-card tutor-card--compact">
-                    <div class="tutor-top">
-                        <div class="tutor-avatar">🎓</div>
-                        <div class="tutor-price" title="Вартість у жовтих зірках">
-                            ★ <?= (int)($t['price_yellow'] ?? 0) ?>
+                <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
+                    <article class="tutor-card tutor-card--compact">
+                        <div class="tutor-top">
+                            <div class="tutor-avatar">🎓</div>
+                            <div class="tutor-price" title="Вартість у жовтих зірках">
+                                ★ <?= (int)($t['price_yellow'] ?? 0) ?>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
-                    <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
-                    <div class="tutor-tags">
-                        <?php foreach ($tags as $tag): ?>
-                            <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
-                        <?php endforeach; ?>
-                    </div>
-                </article>
+                        <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
+                        <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
+                        <div class="tutor-tags">
+                            <?php foreach ($tags as $tag): ?>
+                                <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
+                            <?php endforeach; ?>
+                        </div>
+                    </article>
+                </a>
             <?php endforeach; ?>
         </div>
 
@@ -52,38 +54,42 @@ $recRow2 = array_slice($recommended, 3, 3);
             <div class="carousel-row">
                 <?php foreach ($recRow1 as $t): ?>
                     <?php $tags = is_array($t['tags'] ?? null) ? $t['tags'] : []; ?>
-                    <article class="tutor-card tutor-card--compact">
-                        <div class="tutor-top">
-                            <div class="tutor-avatar">🎓</div>
-                            <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
-                        </div>
-                        <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
-                        <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
-                        <div class="tutor-tags">
-                            <?php foreach ($tags as $tag): ?>
-                                <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
-                            <?php endforeach; ?>
-                        </div>
-                    </article>
+                    <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
+                        <article class="tutor-card tutor-card--compact">
+                            <div class="tutor-top">
+                                <div class="tutor-avatar">🎓</div>
+                                <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
+                            </div>
+                            <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
+                            <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
+                            <div class="tutor-tags">
+                                <?php foreach ($tags as $tag): ?>
+                                    <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        </article>
+                    </a>
                 <?php endforeach; ?>
             </div>
 
             <div class="carousel-row">
                 <?php foreach ($recRow2 as $t): ?>
                     <?php $tags = is_array($t['tags'] ?? null) ? $t['tags'] : []; ?>
-                    <article class="tutor-card tutor-card--compact">
-                        <div class="tutor-top">
-                            <div class="tutor-avatar">🎓</div>
-                            <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
-                        </div>
-                        <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
-                        <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
-                        <div class="tutor-tags">
-                            <?php foreach ($tags as $tag): ?>
-                                <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
-                            <?php endforeach; ?>
-                        </div>
-                    </article>
+                    <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
+                        <article class="tutor-card tutor-card--compact">
+                            <div class="tutor-top">
+                                <div class="tutor-avatar">🎓</div>
+                                <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
+                            </div>
+                            <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
+                            <div class="tutor-title muted"><?= htmlspecialchars($t['title'] ?? '') ?></div>
+                            <div class="tutor-tags">
+                                <?php foreach ($tags as $tag): ?>
+                                    <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$tag)) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        </article>
+                    </a>
                 <?php endforeach; ?>
             </div>
         </div>

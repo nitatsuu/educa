@@ -63,9 +63,10 @@ $tutors = tutors_load_all();
                     <?php endforeach; ?>
                 </div>
 
-                <button class="btn-primary tutor-action" type="button">
-                    Записатися (демо)
-                </button>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:auto;">
+                    <a class="btn-primary" href="/tutor.php?id=<?= urlencode((string)($t['id'] ?? '')) ?>">Профіль</a>
+                    <a class="btn-secondary" href="/chat.php?with=<?= urlencode((string)($t['login'] ?? '')) ?>">Чат</a>
+                </div>
             </article>
         <?php endforeach; ?>
     </div>
