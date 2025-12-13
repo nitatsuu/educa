@@ -1,0 +1,31 @@
+.ratings-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.rating-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:6px;
+  font-size:14px;
+}
+
+.rating-table th,
+.rating-table td{
+  border:1px solid #222535;
+  padding:10px 12px;
+  text-align:left;
+  vertical-align:top;
+}
+
+.rating-table th{
+  background:#0d0f1a;
+  font-size:13px;
+  opacity:0.9;
+}
+
+@media (max-width: 768px){
+  .ratings-head{ flex-direction:column; align-items:flex-start; }
+}

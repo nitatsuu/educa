@@ -1,0 +1,25 @@
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.auth-card {
+  border: 1px solid #222535;
+  border-radius: 14px;
+  padding: 16px;
+  background: #0a0b12;
+}
+
+.hint {
+  margin-top: 14px;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .auth-grid {
+    grid-template-columns: 1fr;
+  }
+}

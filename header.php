@@ -7,7 +7,16 @@ require_once __DIR__ . '/php/init.php';
     <meta charset="UTF-8">
     <title>Educa Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages/auth.css">
+    <link rel="stylesheet" href="/css/pages/profile.css">
+    <link rel="stylesheet" href="/css/pages/tutors.css">
+    <link rel="stylesheet" href="/css/pages/exchange.css">
+    <link rel="stylesheet" href="/css/pages/chat.css">
+    <link rel="stylesheet" href="/css/pages/ratings.css">
+
     <script src="/js/main.js" defer></script>
 </head>
 <body <?= isset($pageBodyAttrs) ? $pageBodyAttrs : '' ?>>

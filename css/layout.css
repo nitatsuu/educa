@@ -1,0 +1,110 @@
+.site-header {
+  border-bottom: 1px solid #222535;
+  background: #090a10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  gap: 16px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.main-nav a {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
+.user-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+}
+
+.stars-yellow {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 204, 0, 0.15);
+}
+
+.stars-blue {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(0, 140, 255, 0.15);
+}
+
+.user-auth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-link {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.btn-link--secondary {
+  opacity: 0.6;
+}
+
+.site-main {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.page-section h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.site-footer {
+  border-top: 1px solid #222535;
+  background: #090a10;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* mobile header */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
+  .user-panel {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
