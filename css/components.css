@@ -92,6 +92,8 @@
 
 #startLesson {
   margin-left: 20px;
+  background-color: aqua;
+  color: #222535;
 }
 
 /* rank pills */

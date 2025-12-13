@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/cd7c97d4e163e48f314c85c604491fd4?family=Hangout);
+
 .site-header {
   border-bottom: 1px solid #222535;
   background: #090a10;
@@ -14,7 +16,8 @@
 
 .logo a {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 70px;
+  font-family: Hangout;
 }
 
 .main-nav {
