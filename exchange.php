@@ -101,6 +101,13 @@ $err = ($_GET['err'] ?? '');
             <?php endif; ?>
         </div>
 
+        <div class="card">
+            <h2>Мерч за сині зірки</h2>
+            <p class="muted">Обмінюй сині зірки на мерч (демо-магазин).</p>
+            <a class="btn-primary" href="/merch.php">Відкрити мерч</a>
+        </div>
+
+
     </div>
 </section>
 

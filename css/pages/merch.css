@@ -1,0 +1,43 @@
+.merch-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:16px;
+  margin-top:12px;
+}
+
+.merch-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.merch-img{
+  height:140px;
+  border-radius:14px;
+  border:1px solid #222535;
+  background:#070810;
+  background-size:cover;
+  background-position:center;
+}
+
+.merch-img--empty{
+  display:grid;
+  place-items:center;
+  font-size:13px;
+  opacity:0.7;
+}
+
+.merch-title{
+  font-weight:700;
+}
+
+.merch-form{
+  margin-top:auto;
+}
+
+@media (max-width: 900px){
+  .merch-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px){
+  .merch-grid{ grid-template-columns: 1fr; }
+}
