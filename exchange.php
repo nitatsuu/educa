@@ -80,6 +80,27 @@ $err = ($_GET['err'] ?? '');
                 </button>
             </form>
         </div>
+
+        <!-- To buy a premium-->
+        <div class="card">
+            <h2>Premium</h2>
+            <p class="muted">
+                Premium відкриває додаткові можливості (демо. просто клікніть). Вартість: <b>$20</b>.
+            </p>
+
+            <?php if (!empty($user['premium'])): ?>
+                <div class="notice success">Premium активовано.</div>
+                <button class="btn-secondary" type="button" disabled>Вже активовано</button>
+            <?php else: ?>
+                <?php if (($_GET['premium'] ?? '') === '1'): ?>
+                <div class="notice success">Premium активовано.</div>
+                <?php endif; ?>
+                <form action="/php/buy_premium.php" method="post">
+                <button class="btn-primary" type="submit">Купити Premium (демо)</button>
+                </form>
+            <?php endif; ?>
+        </div>
+
     </div>
 </section>
 

@@ -13,11 +13,13 @@ if ($user) {
         'login'        => $user['login'],
         'yellow_stars' => (int)($user['yellow'] ?? 0),
         'blue_stars'   => (int)($user['blue'] ?? 0),
+        'premium'      => (bool)($user['premium'] ?? false),
     ];
 } else {
     $currentUser = [
         'login'        => 'Гість',
         'yellow_stars' => 0,
         'blue_stars'   => 0,
+        'premium'      => false,
     ];
 }

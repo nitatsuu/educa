@@ -118,6 +118,19 @@ if (is_array($profile['tags'] ?? null)) {
 
                 <button class="btn-primary" type="submit">Зберегти</button>
             </form>
+
+            <hr style="border:none;border-top:1px solid #222535;margin:16px 0;">
+
+            <?php if (!empty($user['premium'])): ?>
+                <a class="btn-primary" href="/create_course.php" style="display:inline-block;">
+                    Створити курс
+                </a>
+                <?php else: ?>
+                <button class="btn-secondary" type="button" disabled title="Доступно з Premium">
+                    Створити курс (Premium)
+                </button>
+            <?php endif; ?>
+
         </div>
     </div>
 </section>

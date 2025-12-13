@@ -25,8 +25,9 @@ if (users_find($login)) {
 $user = [
     'login' => $login,
     'pass_hash' => password_hash($password, PASSWORD_DEFAULT),
-    'yellow' => 3,
+    'yellow' => 0,
     'blue' => 0,
+    'premium' => false,
     'created_at' => date('c'),
 ];
 
