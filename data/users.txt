@@ -1,3 +1,0 @@
-{"login":"tutor_t1","pass_hash":"$2y$10$ohEk\/u5vmTVK8wz.SBveeeClY2HT9yeo6CdOIH6GWMh6sRK0pcpM6","yellow":0,"blue":0,"premium":false,"system":true,"created_at":"2025-12-13T15:00:48+00:00"}
-{"login":"nitatsuu","pass_hash":"$2y$10$yhYD.8dhBKxhKvTS8AcsD.gSuqSzRfDPlT7CdrGWGUoFQcPUehLyq","yellow":0,"blue":50,"premium":false,"created_at":"2025-12-13T15:01:05+00:00"}
-{"login":"tutor_t2","pass_hash":"$2y$10$7iYFhbvUtkSwdAHMy72tj.av6W2LTVvC.E8aQHC68oiJ.eF0fjIqe","yellow":0,"blue":0,"premium":false,"system":true,"created_at":"2025-12-13T15:03:58+00:00"}
