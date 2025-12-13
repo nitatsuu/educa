@@ -42,7 +42,10 @@ $tutors = tutors_load_all();
             ?>
             <article class="tutor-card" data-tags="<?= htmlspecialchars($dataTags) ?>" data-blob="<?= htmlspecialchars($searchBlob) ?>">
                 <div class="tutor-top">
-                    <div class="tutor-avatar">🎓</div>
+                    <?php $imgN = (int)($t['img'] ?? 0); ?>
+                    <div class="tutor-avatar" style="background-image:url('/img/tutors/tutor<?= $imgN ?>.jpg');">
+                    </div>
+
                     <div class="tutor-price" title="Вартість у жовтих зірках">
                         ★ <?= (int)($t['price_yellow'] ?? 0) ?>
                     </div>

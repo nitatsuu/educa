@@ -32,7 +32,9 @@ $recRow2 = array_slice($recommended, 3, 3);
                 <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
                     <article class="tutor-card tutor-card--compact">
                         <div class="tutor-top">
-                            <div class="tutor-avatar">🎓</div>
+                            <?php $imgN = (int)($t['img'] ?? 0); ?>
+                            <div class="tutor-avatar" style="background-image:url('/img/tutors/tutor<?= $imgN ?>.jpg');"></div>
+
                             <div class="tutor-price" title="Вартість у жовтих зірках">
                                 ★ <?= (int)($t['price_yellow'] ?? 0) ?>
                             </div>
@@ -57,7 +59,9 @@ $recRow2 = array_slice($recommended, 3, 3);
                     <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
                         <article class="tutor-card tutor-card--compact">
                             <div class="tutor-top">
-                                <div class="tutor-avatar">🎓</div>
+                                <?php $imgN = (int)($t['img'] ?? 0); ?>
+                                <div class="tutor-avatar" style="background-image:url('/img/tutors/tutor<?= $imgN ?>.jpg');"></div>
+
                                 <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
                             </div>
                             <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>
@@ -78,7 +82,9 @@ $recRow2 = array_slice($recommended, 3, 3);
                     <a href="/tutor.php?id=<?= urlencode($t['id']) ?>">
                         <article class="tutor-card tutor-card--compact">
                             <div class="tutor-top">
-                                <div class="tutor-avatar">🎓</div>
+                                <?php $imgN = (int)($t['img'] ?? 0); ?>
+                                <div class="tutor-avatar" style="background-image:url('/img/tutors/tutor<?= $imgN ?>.jpg');"></div>
+
                                 <div class="tutor-price">★ <?= (int)($t['price_yellow'] ?? 0) ?></div>
                             </div>
                             <h3 class="tutor-name"><?= htmlspecialchars($t['name'] ?? '—') ?></h3>

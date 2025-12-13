@@ -48,7 +48,7 @@ window.initTutorSearch = function initTutorSearch() {
 
     const v1 = filterContainer(tutorsGrid, q, ".tutor-card");
     const v2 = filterContainer(coursesGrid, q, ".course-card");
-
+    
     // если хочешь — можно потом скрывать заголовок "КУРСИ" когда 0
     // сейчас оставим как есть (для простоты)
   }

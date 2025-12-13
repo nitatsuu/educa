@@ -36,3 +36,4 @@ function profiles_upsert(string $login, array $profile): bool
 
     return file_put_contents(PROFILES_FILE, implode(PHP_EOL, $lines) . PHP_EOL, LOCK_EX) !== false;
 }
+

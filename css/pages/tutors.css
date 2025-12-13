@@ -37,10 +37,14 @@
   height:38px;
   border-radius:12px;
   border: 1px solid #222535;
+  background:#070810;
+  background-size: cover;
+  background-position: center;
   display:grid;
   place-items:center;
-  background:#070810;
+  overflow:hidden;
 }
+
 
 .tutor-price{
   padding: 4px 10px;
@@ -192,6 +196,9 @@
   font-size:13px;
   opacity:0.8;
 }
+.tutor-avatar-fallback{ opacity:0.85; }
+.tutor-avatar{ position:relative; }
+.tutor-avatar-fallback{ position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
 
 @media (max-width: 900px){
   .courses-grid{ grid-template-columns: repeat(2, 1fr); }
