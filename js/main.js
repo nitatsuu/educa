@@ -11,38 +11,46 @@ function parseQuery(q) {
   return { tags, text: text.join(" ") };
 }
 
-function matchesTutor(card, query) {
-  const blob = (card.dataset.blob || "").toLowerCase();
-  const tagsStr = (card.dataset.tags || "").toLowerCase();
+function matchesItem(el, query) {
+  const blob = (el.dataset.blob || "").toLowerCase();
+  const tagsStr = (el.dataset.tags || "").toLowerCase();
 
-  // все теги должны присутствовать
   for (const t of query.tags) {
     if (!tagsStr.includes(t)) return false;
   }
-
-  // если есть текст — ищем в blob
   if (query.text && !blob.includes(query.text)) return false;
-
   return true;
+}
+
+function filterContainer(container, query, selector) {
+  if (!container) return 0;
+  const items = Array.from(container.querySelectorAll(selector));
+  let visible = 0;
+
+  for (const it of items) {
+    const ok = matchesItem(it, query);
+    it.style.display = ok ? "" : "none";
+    if (ok) visible++;
+  }
+  return visible;
 }
 
 window.initTutorSearch = function initTutorSearch() {
   const input = document.getElementById("tutorSearch");
   const clear = document.getElementById("clearSearch");
-  const grid = document.getElementById("tutorsGrid");
-  if (!input || !grid) return;
+  const tutorsGrid = document.getElementById("tutorsGrid");
+  const coursesGrid = document.getElementById("coursesGrid");
 
-  const cards = Array.from(grid.querySelectorAll(".tutor-card"));
+  if (!input) return;
 
   function apply() {
     const q = parseQuery(input.value);
-    let visible = 0;
 
-    for (const c of cards) {
-      const ok = matchesTutor(c, q);
-      c.style.display = ok ? "" : "none";
-      if (ok) visible++;
-    }
+    const v1 = filterContainer(tutorsGrid, q, ".tutor-card");
+    const v2 = filterContainer(coursesGrid, q, ".course-card");
+
+    // если хочешь — можно потом скрывать заголовок "КУРСИ" когда 0
+    // сейчас оставим как есть (для простоты)
   }
 
   input.addEventListener("input", apply);

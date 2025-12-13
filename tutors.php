@@ -1,7 +1,10 @@
 <?php
 require_once __DIR__ . '/header.php';
 require_once __DIR__ . '/php/tutors_data.php';
+require_once __DIR__ . '/php/courses_data.php';
 
+
+$courses = courses_load_all();
 $tutors = tutors_load_all();
 ?>
 
@@ -66,6 +69,40 @@ $tutors = tutors_load_all();
             </article>
         <?php endforeach; ?>
     </div>
+
+
+    
+    <div class="section-divider">
+        <div class="divider-title">КУРСИ</div>
+    </div>
+
+    <div class="courses-grid" id="coursesGrid">
+        <?php foreach ($courses as $c): ?>
+            <?php
+                $tags = is_array($c['tags'] ?? null) ? $c['tags'] : [];
+                $tagsLower = array_map(fn($x) => mb_strtolower((string)$x), $tags);
+                $blob = mb_strtolower(($c['title'] ?? '') . ' ' . ($c['desc'] ?? '') . ' ' . implode(' ', $tagsLower));
+                $dataTags = implode(',', $tagsLower);
+                $imgN = (int)($c['img'] ?? 0);
+            ?>
+            <a class="course-card" href="/course.php?id=<?= urlencode((string)$c['id']) ?>"
+            data-tags="<?= htmlspecialchars($dataTags) ?>"
+            data-blob="<?= htmlspecialchars($blob) ?>">
+                <div class="course-card-cover" style="background-image:url('/img/courses/course<?= $imgN ?>.jpg');"></div>
+                <div class="course-card-body">
+                    <div class="course-card-title"><?= htmlspecialchars((string)($c['title'] ?? '—')) ?></div>
+                    <div class="muted course-card-desc"><?= htmlspecialchars((string)($c['desc'] ?? '')) ?></div>
+                    <div class="course-card-tags">
+                        <?php foreach ($tagsLower as $t): ?>
+                            <span class="tag">#<?= htmlspecialchars($t) ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="course-card-open">Відкрити →</div>
+                </div>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
 </section>
 
 <script>

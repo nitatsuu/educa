@@ -101,16 +101,6 @@
   scroll-snap-align: start;
 }
 
-/* Fix: щоб карусель не “липла” до країв */
-@media (max-width: 768px){
-  .carousel-row{
-    padding-left: var(--pad);
-    padding-right: var(--pad);
-    margin-left: calc(var(--pad) * -1);
-    margin-right: calc(var(--pad) * -1);
-  }
-}
-
 /* Адаптив */
 @media (max-width: 900px){
   .tutors-grid{
@@ -130,4 +120,82 @@
 
   .home-grid{ display:none; }
   .home-carousel{ display:block; }
+}
+
+.section-divider{
+  margin-top:20px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.divider-title{
+  font-weight:700;
+  letter-spacing:0.08em;
+  font-size:12px;
+  opacity:0.75;
+}
+.section-divider::after{
+  content:"";
+  height:1px;
+  background:#222535;
+  flex:1;
+}
+
+.courses-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:16px;
+  margin-top:12px;
+}
+
+.course-card{
+  display:block;
+  border:1px solid #222535;
+  border-radius:14px;
+  overflow:hidden;
+  background:#0a0b12;
+}
+
+.course-card-cover{
+  height:110px;
+  background:#070810;
+  background-size: cover;
+  background-position:center;
+  border-bottom:1px solid #222535;
+}
+
+.course-card-body{
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.course-card-title{
+  font-weight:700;
+}
+
+.course-card-desc{
+  font-size:13px;
+  line-height:1.35;
+}
+
+.course-card-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.course-card-open{
+  margin-top:auto;
+  font-size:13px;
+  opacity:0.8;
+}
+
+@media (max-width: 900px){
+  .courses-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px){
+  .courses-grid{ grid-template-columns: 1fr; }
 }

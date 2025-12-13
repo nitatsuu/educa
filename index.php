@@ -1,7 +1,10 @@
 <?php
 require_once __DIR__ . '/header.php';
 require_once __DIR__ . '/php/tutors_data.php';
+require_once __DIR__ . '/php/courses_data.php';
 
+$courses = courses_load_all();
+$recommendedCourses = array_slice($courses, 0, 6);
 $tutors = tutors_load_all();
 $recommended = array_slice($tutors, 0, 6);
 $recRow1 = array_slice($recommended, 0, 3);
@@ -85,6 +88,34 @@ $recRow2 = array_slice($recommended, 3, 3);
             </div>
         </div>
     </div>
+
+
+    <div class="home-head">
+        <h2>Курси</h2>
+        <a class="btn-link" href="/tutors.php">Дивитися →</a>
+    </div>
+
+    <div class="courses-grid home-courses">
+        <?php foreach ($recommendedCourses as $c): ?>
+            <?php
+                $imgN = (int)($c['img'] ?? 0);
+                $tags = is_array($c['tags'] ?? null) ? $c['tags'] : [];
+            ?>
+            <a class="course-card" href="/course.php?id=<?= urlencode((string)$c['id']) ?>">
+                <div class="course-card-cover" style="background-image:url('/img/courses/course<?= $imgN ?>.jpg');"></div>
+                <div class="course-card-body">
+                    <div class="course-card-title"><?= htmlspecialchars((string)($c['title'] ?? '—')) ?></div>
+                    <div class="muted course-card-desc"><?= htmlspecialchars((string)($c['desc'] ?? '')) ?></div>
+                    <div class="course-card-tags">
+                        <?php foreach ($tags as $t): ?>
+                            <span class="tag">#<?= htmlspecialchars(mb_strtolower((string)$t)) ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
 </section>
 
 <?php

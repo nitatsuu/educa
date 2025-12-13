@@ -16,6 +16,8 @@ require_once __DIR__ . '/php/init.php';
     <link rel="stylesheet" href="/css/pages/exchange.css">
     <link rel="stylesheet" href="/css/pages/chat.css">
     <link rel="stylesheet" href="/css/pages/ratings.css">
+    <link rel="stylesheet" href="/css/pages/course.css">
+
 
     <script src="/js/main.js" defer></script>
 </head>
