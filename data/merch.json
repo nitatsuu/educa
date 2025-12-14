@@ -1,19 +1,20 @@
 [
-  { "id": "m0", "type": "merch", "title": "Шкарпетки (пара #1)", "price_blue": 5, "img": "merch0.jpg" },
-  { "id": "m1", "type": "merch", "title": "Шкарпетки (пара #2)", "price_blue": 5, "img": "merch1.jpg" },
+  { "id": "m0", "type": "merch", "title": "Шкарпетки (пара #1)", "price_blue": 5, "img": "merch4.jpg" },
+  { "id": "m1", "type": "merch", "title": "Шкарпетки (пара #2)", "price_blue": 5, "img": "merch3.jpg" },
   { "id": "m2", "type": "merch", "title": "Худі", "price_blue": 20, "img": "merch2.jpg" },
-  { "id": "m3", "type": "merch", "title": "Блокнот", "price_blue": 10, "img": "merch3.jpg" },
-  { "id": "m4", "type": "merch", "title": "Робот", "price_blue": 150, "img": "merch4.jpg" },
+  { "id": "m3", "type": "merch", "title": "Блокнот", "price_blue": 10, "img": "merch1.jpg" },
+  { "id": "m4", "type": "merch", "title": "Робот", "price_blue": 150, "img": "merch0.jpg" },
 
   { "id": "g0", "type": "gift", "title": "Таємний подарунок", "price_blue": 200, "img": "gift.jpg" },
 
-  { "id": "d0", "type": "discount", "title": "Кінотеатри — знижка 20% (1)", "price_blue": 40, "img": "price0.jpg" },
-  { "id": "d1", "type": "discount", "title": "Кінотеатри — знижка 20% (2)", "price_blue": 40, "img": "price1.jpg" },
-  { "id": "d2", "type": "discount", "title": "Кінотеатри — знижка 20% (3)", "price_blue": 40, "img": "price2.jpg" },
+  { "id": "d0", "type": "discount", "title": "Кінотеатри — знижка 20% (1)", "price_blue": 40, "img": "price3.jpg" },
+  { "id": "d1", "type": "discount", "title": "Кінотеатри — знижка 20% (2)", "price_blue": 40, "img": "price4.jpg" },
+  { "id": "d2", "type": "discount", "title": "Кінотеатри — знижка 20% (3)", "price_blue": 40, "img": "price5.jpg" },
 
-  { "id": "d3", "type": "discount", "title": "Книгарні — знижка 25% (1)", "price_blue": 55, "img": "price3.jpg" },
-  { "id": "d4", "type": "discount", "title": "Книгарні — знижка 25% (2)", "price_blue": 55, "img": "price4.jpg" },
-  { "id": "d5", "type": "discount", "title": "Книгарні — знижка 25% (3)", "price_blue": 55, "img": "price5.jpg" },
+  { "id": "d3", "type": "discount", "title": "Книгарні — знижка 25% (1)", "price_blue": 55, "img": "price0.jpg" },
+  { "id": "d4", "type": "discount", "title": "Книгарні — знижка 25% (2)", "price_blue": 55, "img": "price1.jpg" },
+  { "id": "d5", "type": "discount", "title": "Книгарні — знижка 25% (3)", "price_blue": 55, "img": "price2.jpg" },
 
   { "id": "d6", "type": "discount", "title": "Театри — знижка 20%", "price_blue": 45, "img": "theatre.png" }
 ]
+ 
